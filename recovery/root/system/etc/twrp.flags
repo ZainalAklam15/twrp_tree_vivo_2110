@@ -6,7 +6,7 @@
 /vbmeta          emmc      /dev/block/platform/bootdevice/by-name/vbmeta      flags=backup;flashimg
 /persist         ext4      /dev/block/platform/bootdevice/by-name/persist
 /metadata        ext4      /dev/block/platform/bootdevice/by-name/metadata      flags=display="Metadata"
-/data            ext4      /dev/block/platform/bootdevice/by-name/userdata      fileencryption=aes-256-xts:aes-256-cts:v2
+/data            f2fs      /dev/block/platform/bootdevice/by-name/userdata      fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 
 # vivo partition
 /vgc             ext4       /dev/block/platform/bootdevice/by-name/vgc        flags=display="VGC"
