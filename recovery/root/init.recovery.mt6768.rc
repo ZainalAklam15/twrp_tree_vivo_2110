@@ -39,12 +39,6 @@ service guardianangle  /system/bin/guardianangle
     user root
     seclabel u:r:recovery:s0
 
-service vivofbe /system/bin/vivofbe
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
 
 on property:hwservicemanager.ready=true
     start keymaster-4-0
@@ -57,7 +51,6 @@ on property:ro.crypto.state=unsupported
     stop keymaster-4-0
     stop gatekeeper-1-0
     stop guardianangle
-    stop vivofbe
     stop servicemanager
     stop hwservicemanager
 
@@ -66,7 +59,6 @@ on property:ro.crypto.state=unencrypted
     stop keymaster-4-0
     stop gatekeeper-1-0
     stop guardianangle
-    stop vivofbe
     stop servicemanager
     stop hwservicemanager
 
@@ -75,6 +67,5 @@ on property:twrp.decrypt.done=true
     stop keymaster-4-0
     stop gatekeeper-1-0
     stop guardianangle
-    stop vivofbe
     stop servicemanager
     stop hwservicemanager
