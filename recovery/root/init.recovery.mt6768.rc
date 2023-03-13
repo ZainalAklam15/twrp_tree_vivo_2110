@@ -1,5 +1,5 @@
 import /init.recovery.trustonic.rc
-
+import /init.recovery.touch.rc
 on init
     mkdir /mnt/vendor/persist
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
